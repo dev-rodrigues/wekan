@@ -105,6 +105,8 @@ services:
       - wekan-tier
     expose:
       - 27017
+    ports:
+      - 27017:27017
     volumes:
       - wekan-db:/data/db
       - wekan-db-dump:/dump
@@ -598,7 +600,7 @@ services:
       # example : LOGOUT_ON_MINUTES=55
       #- LOGOUT_ON_MINUTES=
       #-------------------------------------------------------------------
-      # Hide password login form 
+      # Hide password login form
       # - PASSWORD_LOGIN_ENABLED=true
       #-------------------------------------------------------------------
     depends_on:
